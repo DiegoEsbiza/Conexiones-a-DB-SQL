@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.DGVPokemons = new System.Windows.Forms.DataGridView();
+            this.pbPokemon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPokemons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPokemon)).BeginInit();
             this.SuspendLayout();
             // 
             // DGVPokemons
@@ -39,17 +41,29 @@
             this.DGVPokemons.Name = "DGVPokemons";
             this.DGVPokemons.Size = new System.Drawing.Size(431, 182);
             this.DGVPokemons.TabIndex = 0;
+            this.DGVPokemons.SelectionChanged += new System.EventHandler(this.DGVPokemons_SelectionChanged);
+            // 
+            // pbPokemon
+            // 
+            this.pbPokemon.Location = new System.Drawing.Point(459, 12);
+            this.pbPokemon.Name = "pbPokemon";
+            this.pbPokemon.Size = new System.Drawing.Size(184, 181);
+            this.pbPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPokemon.TabIndex = 1;
+            this.pbPokemon.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 304);
+            this.ClientSize = new System.Drawing.Size(659, 304);
+            this.Controls.Add(this.pbPokemon);
             this.Controls.Add(this.DGVPokemons);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVPokemons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPokemon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -57,6 +71,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DGVPokemons;
+        private System.Windows.Forms.PictureBox pbPokemon;
     }
 }
 

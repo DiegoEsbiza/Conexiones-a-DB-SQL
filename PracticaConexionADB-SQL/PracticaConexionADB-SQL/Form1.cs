@@ -12,6 +12,7 @@ namespace PracticaConexionADB_SQL
 {
     public partial class Form1 : Form
     {
+        private List<Pokemon> listaPokemon;
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +21,15 @@ namespace PracticaConexionADB_SQL
         private void Form1_Load(object sender, EventArgs e)
         {
             PokemonNegocio negocio = new PokemonNegocio();
-            DGVPokemons.DataSource = negocio.Listar();
+            listaPokemon = negocio.Listar();
+            DGVPokemons.DataSource = listaPokemon;
+            pbPokemon.Load(listaPokemon[0].UrlImagen);
+        }
+
+        private void DGVPokemons_SelectionChanged(object sender, EventArgs e)
+        {
+            Pokemon seleccionado = (Pokemon)DGVPokemons.CurrentRow.DataBoundItem;
+            pbPokemon.Load(seleccionado.UrlImagen);
         }
     }
 }

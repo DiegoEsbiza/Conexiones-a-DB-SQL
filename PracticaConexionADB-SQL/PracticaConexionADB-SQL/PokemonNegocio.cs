@@ -21,7 +21,7 @@ namespace PracticaConexionADB_SQL
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database = POKEDEX_DB; integrated security = true;";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT Numero, Nombre, Descripcion FROM POKEMONS";
+                comando.CommandText = "SELECT Numero, Nombre, Descripcion, UrlImagen FROM POKEMONS";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -33,6 +33,7 @@ namespace PracticaConexionADB_SQL
                     aux.Numero = Lector.GetInt32(0);
                     aux.Nombre = (string)Lector["Nombre"];
                     aux.Descripcion = (string)Lector["Descripcion"];
+                    aux.UrlImagen = (string)Lector["UrlImagen"];
 
                     lista.Add(aux);
                 }
