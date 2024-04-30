@@ -23,6 +23,7 @@ namespace PracticaConexionADB_SQL
             PokemonNegocio negocio = new PokemonNegocio();
             listaPokemon = negocio.Listar();
             DGVPokemons.DataSource = listaPokemon;
+            DGVPokemons.Columns["UrlImagen"].Visible = false;
             pbPokemon.Load(listaPokemon[0].UrlImagen);
         }
 
