@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlTypes;
 using System.Data.SqlClient;
+using dominio;
 
-namespace PracticaConexionADB_SQL
+namespace negocio
 { 
-    internal class PokemonNegocio
+    public class PokemonNegocio
     {
         public List<Pokemon> Listar()
         {
