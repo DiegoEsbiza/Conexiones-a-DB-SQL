@@ -32,7 +32,7 @@ namespace PracticaConexionADB_SQL
         private void DGVPokemons_SelectionChanged(object sender, EventArgs e)
         {
             Pokemon seleccionado = (Pokemon)DGVPokemons.CurrentRow.DataBoundItem;
-            pbPokemon.Load(seleccionado.UrlImagen);
+            cargarImagen(seleccionado.UrlImagen);
         }
 
         private void cargarImagen(string imagen)
@@ -44,7 +44,7 @@ namespace PracticaConexionADB_SQL
             catch (Exception ex)
             {
 
-                pbPokemon.Load("https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg");
+                pbPokemon.Load("https://t4.ftcdn.net/jpg/05/17/53/57/360_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg");
             }
         }
 
