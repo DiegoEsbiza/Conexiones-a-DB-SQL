@@ -26,13 +26,32 @@ namespace PracticaConexionADB_SQL
             listaPokemon = negocio.Listar();
             DGVPokemons.DataSource = listaPokemon;
             DGVPokemons.Columns["UrlImagen"].Visible = false;
-            pbPokemon.Load(listaPokemon[0].UrlImagen);
+            cargarImagen(listaPokemon[0].UrlImagen);
         }
 
         private void DGVPokemons_SelectionChanged(object sender, EventArgs e)
         {
             Pokemon seleccionado = (Pokemon)DGVPokemons.CurrentRow.DataBoundItem;
             pbPokemon.Load(seleccionado.UrlImagen);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbPokemon.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pbPokemon.Load("https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg");
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaPokemon alta = new frmAltaPokemon();
+            alta.ShowDialog();
         }
     }
 }

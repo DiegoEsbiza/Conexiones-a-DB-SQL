@@ -13,7 +13,7 @@ namespace negocio
         AccesoDatos datos = new AccesoDatos();
         public List<Elemento> Listar() 
         {
-            List<Elemento> lista = new List <Elemento>();
+            List<Elemento> lista = new List<Elemento>();
             AccesoDatos datos = new AccesoDatos();
 
             try 
