@@ -95,7 +95,7 @@
             this.button1.Location = new System.Drawing.Point(32, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -105,7 +105,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(169, 248);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -117,7 +117,7 @@
             this.cboTipo.Location = new System.Drawing.Point(107, 154);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(137, 21);
-            this.cboTipo.TabIndex = 6;
+            this.cboTipo.TabIndex = 4;
             // 
             // cboDebilidad
             // 
@@ -126,7 +126,7 @@
             this.cboDebilidad.Location = new System.Drawing.Point(107, 193);
             this.cboDebilidad.Name = "cboDebilidad";
             this.cboDebilidad.Size = new System.Drawing.Size(137, 21);
-            this.cboDebilidad.TabIndex = 7;
+            this.cboDebilidad.TabIndex = 5;
             // 
             // lblTipo
             // 
@@ -134,7 +134,7 @@
             this.lblTipo.Location = new System.Drawing.Point(57, 157);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(28, 13);
-            this.lblTipo.TabIndex = 8;
+            this.lblTipo.TabIndex = 0;
             this.lblTipo.Text = "Tipo";
             // 
             // lblDebilidad
@@ -143,7 +143,7 @@
             this.lblDebilidad.Location = new System.Drawing.Point(41, 196);
             this.lblDebilidad.Name = "lblDebilidad";
             this.lblDebilidad.Size = new System.Drawing.Size(51, 13);
-            this.lblDebilidad.TabIndex = 8;
+            this.lblDebilidad.TabIndex = 0;
             this.lblDebilidad.Text = "Debilidad";
             // 
             // frmAltaPokemon
@@ -165,7 +165,7 @@
             this.Controls.Add(this.txtNumero);
             this.Name = "frmAltaPokemon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nuevo Pokemon";
+            this.Text = "Aceptar";
             this.Load += new System.EventHandler(this.frmAltaPokemon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

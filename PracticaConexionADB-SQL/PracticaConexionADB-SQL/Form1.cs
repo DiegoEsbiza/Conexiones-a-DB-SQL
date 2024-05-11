@@ -22,6 +22,17 @@ namespace PracticaConexionADB_SQL
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+
+        private void DGVPokemons_SelectionChanged(object sender, EventArgs e)
+        {
+            Pokemon seleccionado = (Pokemon)DGVPokemons.CurrentRow.DataBoundItem;
+            cargarImagen(seleccionado.UrlImagen);
+        }
+
+        private void cargar()
+        {
             PokemonNegocio negocio = new PokemonNegocio();
             try
             {
@@ -35,12 +46,6 @@ namespace PracticaConexionADB_SQL
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        private void DGVPokemons_SelectionChanged(object sender, EventArgs e)
-        {
-            Pokemon seleccionado = (Pokemon)DGVPokemons.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.UrlImagen);
         }
 
         private void cargarImagen(string imagen)
@@ -60,6 +65,7 @@ namespace PracticaConexionADB_SQL
         {
             frmAltaPokemon alta = new frmAltaPokemon();
             alta.ShowDialog();
+            cargar();
         }
     }
 }

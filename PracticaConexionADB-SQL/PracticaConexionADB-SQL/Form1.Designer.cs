@@ -38,8 +38,11 @@
             // DGVPokemons
             // 
             this.DGVPokemons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVPokemons.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DGVPokemons.Location = new System.Drawing.Point(12, 12);
+            this.DGVPokemons.MultiSelect = false;
             this.DGVPokemons.Name = "DGVPokemons";
+            this.DGVPokemons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVPokemons.Size = new System.Drawing.Size(570, 202);
             this.DGVPokemons.TabIndex = 0;
             this.DGVPokemons.SelectionChanged += new System.EventHandler(this.DGVPokemons_SelectionChanged);
