@@ -23,10 +23,18 @@ namespace PracticaConexionADB_SQL
         private void Form1_Load(object sender, EventArgs e)
         {
             PokemonNegocio negocio = new PokemonNegocio();
-            listaPokemon = negocio.Listar();
-            DGVPokemons.DataSource = listaPokemon;
-            DGVPokemons.Columns["UrlImagen"].Visible = false;
-            cargarImagen(listaPokemon[0].UrlImagen);
+            try
+            {
+                listaPokemon = negocio.Listar();
+                DGVPokemons.DataSource = listaPokemon;
+                DGVPokemons.Columns["UrlImagen"].Visible = false;
+                cargarImagen(listaPokemon[0].UrlImagen);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void DGVPokemons_SelectionChanged(object sender, EventArgs e)
